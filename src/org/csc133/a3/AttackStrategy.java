@@ -2,6 +2,7 @@ package org.csc133.a3;
 
 import com.codename1.util.MathUtil;
 
+//Use of Strategy Design Pattern
 public class AttackStrategy implements IStrategy
 {
     @Override

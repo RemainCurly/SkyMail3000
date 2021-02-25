@@ -14,9 +14,6 @@ public class NPHCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, colides with a NonPlayerHelicopter
-     */
     public void actionPerformed(ActionEvent e)
     {
         g.collide('h');

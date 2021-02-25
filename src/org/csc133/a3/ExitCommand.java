@@ -13,11 +13,6 @@ public class ExitCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, will prompt user for exit
-     * On yes: Exits program
-     * On no: Leaves dialog and does nothing
-     */
     public void actionPerformed(ActionEvent e)
     {
         System.out.println("Exit command fired!");

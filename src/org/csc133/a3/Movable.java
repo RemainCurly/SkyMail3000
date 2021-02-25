@@ -5,7 +5,6 @@ abstract class Movable extends GameObject
     private int heading;
     private int speed;
 
-    //Getters and Setters
     public int getSpeed()
     {
         return this.speed;

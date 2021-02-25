@@ -14,9 +14,6 @@ public class SoundCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, either turns sound off or on
-     */
     public void actionPerformed(ActionEvent e)
     {
         g.toggleSound();

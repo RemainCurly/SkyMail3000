@@ -14,9 +14,6 @@ public class BrakeCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, the Player helicopter will slow down a bit
-     */
     public void actionPerformed(ActionEvent evt)
     {
         g.brake(1);

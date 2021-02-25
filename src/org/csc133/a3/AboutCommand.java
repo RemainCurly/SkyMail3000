@@ -4,6 +4,7 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.events.ActionEvent;
 
+//Use of Command Design Pattern (seen in all ___Command.java files)
 public class AboutCommand extends Command
 {
     public AboutCommand()
@@ -12,9 +13,6 @@ public class AboutCommand extends Command
     }
 
     @Override
-    /**
-     * When this command is fired, it will display a Dialog box with the required information
-     */
     public void actionPerformed(ActionEvent e)
     {
         System.out.println("About command fired!");

@@ -14,9 +14,6 @@ public class BirdCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, the Player helicopter will collide with a Bird, taking damage
-     */
     public void actionPerformed(ActionEvent e)
     {
         g.collide('b');

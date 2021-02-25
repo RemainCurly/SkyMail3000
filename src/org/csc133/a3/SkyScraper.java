@@ -14,10 +14,10 @@ public class SkyScraper extends Fixed
     /**
      * Sets color for unreached AND reached skyscraper, size (based off Player helicopter),
      * location, and if it's been reached yet or not
-     * @param sequenceNumber Sets sequential number of the skyscraper
-     * @param size Sets size (which is equal to Player helicopter's size)
-     * @param locationX Sets pre-determined X-coordinate location
-     * @param locationY Sets pre-determined Y-coordinate location
+     * @param sequenceNumber  Sets sequential number of the skyscraper
+     * @param size            Sets size (which is equal to Player helicopter's size)
+     * @param locationX       Sets pre-determined X-coordinate location
+     * @param locationY       Sets pre-determined Y-coordinate location
      */
     public SkyScraper(int sequenceNumber, int size, double locationX, double locationY)
     {
@@ -34,8 +34,8 @@ public class SkyScraper extends Fixed
     /**
      * Draw the Skyscraper's color based off if it's been SEQUENTIALLY reached or not.
      * Draws rectangle and a String of its sequence number
-     * @param g The Graphics object. I like thinking of it like a paintbrush, since it does the drawing
-     * @param containerOrigin Gets our origin based off how our home component is set
+     * @param g                  The Graphics object
+     * @param containerOrigin    Gets our origin based off how our home component is set
      */
     public void draw(Graphics g, Point containerOrigin)
     {

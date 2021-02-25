@@ -43,7 +43,6 @@ public class GameWorld
      */
     public void reinit()
     {
-        //Lostlife sound
         if(!soundOff)
             lostLife.play();
 
@@ -68,9 +67,11 @@ public class GameWorld
     {
         return numLives <= 0;
     }
-
-    //If the Helicopter is capable, increase its speed by the given amount
-    //    Otherwise, tell User it's already at max speed
+    /**
+     * If the Helicopter is capable, increase its speed by the given amount
+     * Otherwise, tell User it's already at max speed
+     * @param amount       amount of speed to increase by
+     */
     public void accelerate(int amount)
     {
         Helicopter h = goc.getHeli();
@@ -86,8 +87,11 @@ public class GameWorld
             System.out.println("Already at max speed of " + h.getMaxSpeed() + "!");
     }
 
-    //Decrease the Helicopter's speed by the given amount
-    //    If stationary, tell User it's already at 0 speed
+    /**
+     * Decrease the Helicopter's speed by the given amount
+     * If stationary, tell User it's already at 0 speed
+     * @param amount    amount of speed to decrease by
+     */
     public void brake(int amount)
     {
         Helicopter h = goc.getHeli();
@@ -105,7 +109,10 @@ public class GameWorld
         }
     }
 
-    //Helicopter takes damage based off entity chosen
+    /**
+     * Makes helicopter take damage based on the entity chosen
+     * @param entity    Char representing the type of GameObject collided with
+     */
     public void collide(char entity)
     {
         Helicopter h = goc.getHeli();
@@ -142,7 +149,6 @@ public class GameWorld
         if(h.getSpeed() > h.getMaxSpeed())
             h.setSpeed(h.getMaxSpeed());
 
-        //If maxDamage is reached, User loses a life and the game is reinitialized
         if(h.isBroken())
         {
             System.out.println("Max damage! Lost a life");
@@ -163,7 +169,6 @@ public class GameWorld
         RefuelingBlimp rb = goc.getRefuelingBlimp(emptyBlimps);
         emptyBlimps++;
 
-        //Refuel noise
         if(refuel == null)
             refuel = new Sound("refuel.wav");
 
@@ -182,7 +187,10 @@ public class GameWorld
         goc.addNewBlimp();
     }
 
-    //Increases game clock, tells all Movable objectCollection to move, and consumes Helicopter fuel
+    /**
+     * Increases game clock, tells all Movable objectCollection to move, and consumes Helicopter fuel
+     * @param mv     Instance of MapView
+     */
     public void tick(MapView mv)
     {
         Helicopter h = goc.getHeli();
@@ -192,7 +200,6 @@ public class GameWorld
 
         h.consumeFuel();
 
-        //If fuel is 0, User loses a life and game is reinitialized
         if(h.outtaGas())
         {
             h.setSpeed(0);
@@ -255,6 +262,11 @@ public class GameWorld
         }
     }
 
+    /**
+     * Collision detection for NonPlayerHelicopters vs. SkyScrapers
+     * @param nph       Instance of NonPlayerHelicopter
+     * @param sequence  SkyScraper sequence number
+     */
     public void travelNPH(NonPlayerHelicopter nph, int sequence)
     {
         SkyScraper s = goc.getSkyScraper(sequence - 1);
@@ -274,7 +286,10 @@ public class GameWorld
             }
         }
     }
-    //Turns Helicopter left or right, depending on direction provided
+    /**
+     * Turns Helicopter left or right, depending on direction provided
+     * @param direction    Char representing the Left or Right direction
+     */
     public void turn(char direction)
     {
         Helicopter h = goc.getHeli();
@@ -287,7 +302,9 @@ public class GameWorld
             System.out.println("ERROR: Not a left/right direction");
     }
 
-    //If all SkyScrapers sequentially reached, good ending! Otherwise, bad ending
+    /**
+     * If all SkyScrapers sequentially reached, good ending! Otherwise, bad ending
+     */
     public void exit()
     {
         if(goc.getHeli().getLastSkyScraperReached() == NUM_SKYSCRAPERS)
@@ -298,7 +315,6 @@ public class GameWorld
         System.exit(0);
     }
 
-    //Getters/Setters
     public int getNumLives()
     {
         return numLives;

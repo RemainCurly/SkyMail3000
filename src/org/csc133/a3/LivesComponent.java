@@ -18,7 +18,7 @@ public class LivesComponent extends Component
 
     /**
      * Gets the GameWorld, initializes the 7-segment displays, begins by showing 0, and sets default LED color
-     * @param gw
+     * @param gw     Instance of GameWorld
      */
     public LivesComponent(GameWorld gw)
     {

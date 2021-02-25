@@ -87,9 +87,9 @@ public class GameClockComponent extends Component
 
     /**
      * Visually displays elapsed time based off minute/second/tenth second conversions
-     * @param m
-     * @param s
-     * @param ms
+     * @param m      Minutes
+     * @param s      Seconds
+     * @param ms     10th second
      */
     private void setTime(int m, int s, int ms)
     {
@@ -118,7 +118,7 @@ public class GameClockComponent extends Component
     /**
      * If we're overtime, clock becomes red
      * Otherwise, clock is default colored
-     * @param minutes
+     * @param minutes      Minutes on clock
      */
     private void alterColors(int minutes)
     {

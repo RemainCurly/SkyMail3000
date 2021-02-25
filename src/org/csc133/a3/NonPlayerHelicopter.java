@@ -14,7 +14,7 @@ public class NonPlayerHelicopter extends Helicopter
     /**
      * Sets a lot of initial characteristics, similar to Player helicopter.
      * Except NPHs have strategy and look at the next skyScraper
-     * @param size Determines how big NPHs are. Should be equal to Player helicopter's size
+     * @param size      Determines how big NPHs are. Should be equal to Player helicopter's size
      */
     public NonPlayerHelicopter(int size)
     {
@@ -31,8 +31,8 @@ public class NonPlayerHelicopter extends Helicopter
 
     /**
      * Checks if the NPH has finished the Player helicopter's task
-     * @param num_skyscrapers To check the required number of skyscrapers to sequentially reach
-     * @return True if the NPH has sequentially reached all the skyscrapers, false otherwise
+     * @param num_skyscrapers    To check the required number of skyscrapers to sequentially reach
+     * @return                   True if the NPH has sequentially reached all the skyscrapers, false otherwise
      */
     public boolean wonGame(int num_skyscrapers)
     {
@@ -42,6 +42,8 @@ public class NonPlayerHelicopter extends Helicopter
     @Override
     /**
      * Keeps NPHs at infinite fuel, draws them, and sets their heading lines
+     * @param g                  The Graphics object
+     * @param containerOrigin    The origin coordinates of CN1's Frame
      */
     public void draw(Graphics g, Point containerOrigin)
     {
@@ -60,6 +62,7 @@ public class NonPlayerHelicopter extends Helicopter
     @Override
     /**
      * Similar to Player helicopter collision
+     * @param damage       the added damage. Helps determine setColor
      */
     public void collision(int damage)
     {
@@ -91,7 +94,7 @@ public class NonPlayerHelicopter extends Helicopter
 
     /**
      * Changes the strategy of the NPH
-     * @param strat the new NPH strategy
+     * @param strat     the new NPH strategy
      */
     public void setStrategy(IStrategy strat)
     {
@@ -100,7 +103,7 @@ public class NonPlayerHelicopter extends Helicopter
 
     /**
      * Executes the current strategy
-     * @param gw An instance of GameWorld to help out our strategies
+     * @param gw        An instance of GameWorld to help out our strategies
      */
     public void invokeStrategy(GameWorld gw)
     {

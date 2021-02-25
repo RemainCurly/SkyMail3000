@@ -18,7 +18,7 @@ public class HeadingComponent extends Component
 
     /**
      * Fetches the active GameWorld, initializes our 7-segment digits, shows all 0's to begin, and sets our default LED color
-     * @param gw Our instance of GameWorld
+     * @param gw  Instance of GameWorld
      */
     public HeadingComponent(GameWorld gw)
     {

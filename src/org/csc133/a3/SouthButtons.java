@@ -16,8 +16,8 @@ public class SouthButtons extends Container
 {
     /**
      * In the South part of our Game, we create Arrow images and link commands to them so they work on click
-     * @param gw The active GameWorld instance, since certain commands require them
-     * @throws IOException If somehow we mess up on retrieving the arrow images
+     * @param gw           The active GameWorld instance, since certain commands require them
+     * @throws IOException If an error occurs retrieving the arrow images
      */
     public SouthButtons(GameWorld gw) throws IOException
     {

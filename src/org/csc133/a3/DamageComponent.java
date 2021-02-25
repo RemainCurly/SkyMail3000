@@ -19,7 +19,7 @@ public class DamageComponent extends Component
     /**
      * Gets the GameWorld reference, initializes the 7-segment digits,
      * sets the showing digits to 0, and sets the default LED color
-     * @param gw
+     * @param gw     Instance of GameWorld
      */
     public DamageComponent(GameWorld gw)
     {

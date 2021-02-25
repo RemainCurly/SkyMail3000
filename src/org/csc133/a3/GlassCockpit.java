@@ -22,7 +22,7 @@ public class GlassCockpit extends Container
     /**
      * Sets our labels, as well as our active Game components. The components will behave based off
      * information from our given instance of GameWorld.
-     * @param gw Our instance of GameWorld
+     * @param gw  Instance of GameWorld
      */
     public GlassCockpit(GameWorld gw)
     {

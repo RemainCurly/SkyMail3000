@@ -21,7 +21,7 @@ public class Bird extends Movable
 
     /**
      * Birds' headings get altered slightly and randomly as they move
-     * @param mv
+     * @param mv     Active instance of MapView
      */
     public void move(MapView mv)
     {
@@ -42,14 +42,13 @@ public class Bird extends Movable
 
     }
 
-    //Overridden method. Can't change color of Bird once initialized
     public void setColor(int r, int g, int b)
     {}
 
     /**
      * Finds the Bird's location, draws an empty circle, and give it a header line to determine location
-     * @param g
-     * @param containerOrigin
+     * @param g                  Graphics object
+     * @param containerOrigin    Origin of the CN1 container
      */
     public void draw(Graphics g, Point containerOrigin)
     {

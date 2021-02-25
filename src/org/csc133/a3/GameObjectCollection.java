@@ -6,9 +6,6 @@ import java.util.Vector;
 
 public class GameObjectCollection extends Vector<GameObject>
 {
-    /**
-     * All GameObjects are stored into different vectors based off what kind of GameObject they are
-     */
     private Vector<GameObject> birds;
     private Vector<GameObject> NPHs;
     private Vector<GameObject> skyScrapers;
@@ -19,7 +16,7 @@ public class GameObjectCollection extends Vector<GameObject>
 
     /**
      * Initializes our vectors, creating and storing all the objects the Game needs
-     * @param g
+     * @param g      Instance of GameWorld
      */
     public GameObjectCollection(GameWorld g)
     {
@@ -55,9 +52,9 @@ public class GameObjectCollection extends Vector<GameObject>
     }
 
     /**
-     * Lines 59-109 all involve retrieving ceratin GameObjects or the quantity of them
-     * @param sequence
-     * @return
+     * Lines 62-111 all involve retrieving ceratin GameObjects or the quantity of them
+     * @param sequence     the sequential GameObject
+     * @return             either the GameObject or the amount of the GameObject
      */
     public SkyScraper getSkyScraper(int sequence)
     {
@@ -113,7 +110,7 @@ public class GameObjectCollection extends Vector<GameObject>
     /**
      * Here, we go through the Vectors of movable objects and tell them to move.
      * We also invoke strategies of the NPHs based off the current player-selected strategy
-     * @param mv
+     * @param mv     Instance of MapView
      */
     public void moveMovables(MapView mv)
     {
@@ -179,7 +176,7 @@ public class GameObjectCollection extends Vector<GameObject>
 
     /**
      * Determines if a NonPlayerHelicopter has beaten the Player in his objective
-     * @param numSkyscrapers
+     * @param numSkyscrapers     The amount of SkyScraper GameObjects
      * @return true if an NPH has sequentially reached the last skyscraper. False otherwise
      */
     public boolean isNPHVictory(int numSkyscrapers)

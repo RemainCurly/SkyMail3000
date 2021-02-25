@@ -12,9 +12,6 @@ public class HelpCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, shows a Dialog with all the key listened commands the player can use
-     */
     public void actionPerformed(ActionEvent e)
     {
         System.out.println("Help command fired!");

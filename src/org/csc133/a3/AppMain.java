@@ -1,6 +1,5 @@
 /*****************
  * Michael Burns
- * Assignment 1
  * 10/10/2020
  *****************/
 
@@ -31,20 +30,12 @@ public class AppMain
 
     public void init(Object context)
     {
-        // use two network threads instead of one
         updateNetworkThreadCount(2);
-
         theme = UIManager.initFirstTheme("/theme");
-
-        // Enable Toolbar on all Forms by default
         Toolbar.setGlobalToolbar(true);
-
-        // Pro only feature
         Log.bindCrashProtection(true);
-
         addNetworkErrorListener(err ->
         {
-            // prevent the event from propagating
             err.consume();
             if(err.getError() != null)
             {
@@ -63,7 +54,6 @@ public class AppMain
             return;
         }
 
-        //Creates the game we will be playing
         new Game();
     }
 

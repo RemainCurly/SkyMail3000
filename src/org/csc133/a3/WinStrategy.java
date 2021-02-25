@@ -7,8 +7,8 @@ public class WinStrategy implements IStrategy
     @Override
     /**
      * This strategy will cause all NPHs to reach the next Sequential skyscraper and remain there
-     * @param gw The GameWorld instance, so we know about Skyscraper locations
-     * @param nph The instance of the NPH we're executing the strategy of
+     * @param gw      The GameWorld instance, so we know about Skyscraper locations
+     * @param nph     The instance of the NPH we're executing the strategy of
      */
     public void executeStrategy(GameWorld gw, NonPlayerHelicopter nph)
     {

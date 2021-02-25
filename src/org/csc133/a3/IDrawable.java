@@ -9,7 +9,7 @@ public interface IDrawable
 {
     /**
      * Drawable objects will all need the method that lets them draw
-     * @param g The Graphics object. I like thinking of it like a paintbrush, since it does the drawing
+     * @param g               The Graphics object
      * @param containerOrigin Gets our origin based off how our home component is set
      */
     public void draw(Graphics g, Point containerOrigin);

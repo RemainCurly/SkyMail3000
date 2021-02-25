@@ -14,9 +14,6 @@ public class StrategyCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, swaps NPH commands. If they're all on "Win", they'll switch to "Attack", and vice versa
-     */
     public void actionPerformed(ActionEvent e)
     {
         for(int i = 0; i < g.getGoc().getNumNPHs(); i++)

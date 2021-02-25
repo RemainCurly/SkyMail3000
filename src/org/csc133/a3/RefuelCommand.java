@@ -14,9 +14,6 @@ public class RefuelCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, performs the refuel action in the GameWorld class
-     */
     public void actionPerformed(ActionEvent e)
     {
         g.refuel();

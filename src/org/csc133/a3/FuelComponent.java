@@ -20,7 +20,7 @@ public class FuelComponent extends Container
     /**
      * Gets the GameWorld instance, initializes 7-segment digits,
      * shows all 0's, and sets default LED color
-     * @param gw
+     * @param gw     Instance of GameWorld
      */
     public FuelComponent(GameWorld gw)
     {

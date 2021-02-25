@@ -65,7 +65,6 @@ public class RefuelingBlimp extends Fixed
         return this.capacity <= 0;
     }
 
-    //Displays capacity, along with Fixed and GameObject toString variables
     @Override
     public String toString()
     {
@@ -76,8 +75,8 @@ public class RefuelingBlimp extends Fixed
 
     /**
      * Draws an ellipse, with a changeable color and a changeable string that indicates the capacity
-     * @param g The Graphics object. I like thinking of it like a paintbrush, since it does the drawing
-     * @param containerOrigin Gets our origin based off how our home component is set
+     * @param g                  The Graphics object
+     * @param containerOrigin    Gets our origin based off how our home component is set
      */
     public void draw(Graphics g, Point containerOrigin)
     {
@@ -90,7 +89,6 @@ public class RefuelingBlimp extends Fixed
         g.drawString(Integer.toString(this.capacity), containerOrigin.getX()+(int)getLocationX() + (getSize()/2), containerOrigin.getY()+(int)getLocationY() + (getSize()/3));
     }
 
-    //Overridden methods
     @Override
     public void setLocationX(double locationX) {}
     @Override

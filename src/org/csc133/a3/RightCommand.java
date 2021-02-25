@@ -14,10 +14,6 @@ public class RightCommand extends Command
     }
 
     @Override
-    /**
-     * When fired, tells Player helicopter to turn right (or in the odd case of this
-     * assignment, turn left)
-     */
     public void actionPerformed(ActionEvent e)
     {
         g.turn('r');
